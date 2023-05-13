@@ -5,10 +5,10 @@ debug: CFLAGS+=-g
 
 all: lab1 test
 
-jab1: labl.o
+lab1: labl.o
 	gcc $(CFLAGS) -o lab1 lab1.o
 
-jab1.o: labl.c
+lab1.o: labl.c
 	gcc $(CFLAGS) -c lab1.c
 
 test: test.o
