@@ -9,7 +9,7 @@
 void * long_thread(void *notused)
 
 {
-	printf("V etom potoke moe imya Kuzmin, a imya Alexander, i on vipolnyaetsa 20 sekund \n");
+	printf("V etom potoke moya familia Kuzmin, a imya Alexander, i on vipolnyaetsa 20 sekund \n");
 	sleep(20);
 }
 
