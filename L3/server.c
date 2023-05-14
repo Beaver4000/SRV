@@ -18,11 +18,11 @@ char message[512];
 while(1)
 	{
 
-	revid=MsgReceive(chid,message,sizeof(message), NULL);
-	printf("Polychili soobshenie, rcvid %X \n",revid );
+	rcvid=MsgReceive(chid,message,sizeof(message), NULL);
+	printf("Polychili soobshenie, rcvid %X \n",rcvid );
 	printf("Soosbshenie takoe: \"%s\". \n", message );
 
-	if (!strcemp(message,"Kuzmin")) strcpy(message, "Alexander");
+	if (!strcmp(message,"Kuzmin")) strcpy(message, "Alexander");
 	else strcpy(message, "Another answer");
 
 	MsgReply(rcvid, EOK, message, sizeof(message));
