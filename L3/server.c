@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <string.h>
 #include <pthread.h>
 #include <inttypes.h>
 #include <errno.h>
 #include <sys/neutrino.h>
+
 
 void server(void )
 {
