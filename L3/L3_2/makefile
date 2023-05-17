@@ -1,10 +1,10 @@
-all: Lab3_2
+all: L3_2
 
-Lab3_2: Lab3_2.o
-	g++ -o Lab3_2 Lab3_2.o
+L3_2: L3_2.o
+	g++ -o L3_2 L3_2.o
 
-Lab3_2.o: Lab3_2.cpp
-	g++ -c Lab3_2.cpp
+L3_2.o: L3_2.cpp
+	g++ -c L3_2.cpp
 
 clean:
-	rm -rf Lab3_2 *.o
+	rm -rf L3_2 *.o
