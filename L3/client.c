@@ -23,9 +23,10 @@ printf("Vveli %d \n", serv_pid);
 coid=ConnectAttach(0,serv_pid,1,0,0);
 printf("Connect res %d ,vvedite soobshenie \n", coid);
 scanf("%s", &smsg);
-
+fflush(stdin);
 printf("Vveli %s \n", smsg);
 if(MsgSend(coid,smsg,strlen(smsg)+1,rmsg, sizeof(rmsg))==-1) printf("error msgsend \n");
+ConnectDetach(coid);
 return 0;
 
 }
