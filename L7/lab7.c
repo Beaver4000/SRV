@@ -42,7 +42,7 @@ void *producer(void *not_used)
 			printf("Wp2 \n");
 			pthread_cond_wait(&cond, &mutex);
 		}
-		data_ready = l;
+		data_ready = 1;
 		inf++;
 		printf("Wp3 \n");
 		pthread_cond_signal(&cond);
