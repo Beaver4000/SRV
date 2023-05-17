@@ -50,10 +50,11 @@ void *producer(void *not_used)
 	}
 }
 
-void main(void)
+int main(void)
 {
-	printf("Start. I992 Kuzmin Alexander\n\n");
+	printf("Start. I992 Kuzmin Alexander\n");
 	pthread_create(NULL,NULL, consumer, NULL);
 	pthread_create(NULL,NULL, producer, NULL);
 	sleep(10);
+	return 0;
 }
