@@ -33,7 +33,7 @@ void *producer(void *not_used)
 	
 	while(1)
 	{
-		sleep(4);
+		sleep(2);
 		printf("proizvoditel polychil daniie ot h/w = %d \n", inf);
 		pthread_mutex_lock(&mutex);
 		printf("Wpl \n");
@@ -55,5 +55,5 @@ void main(void)
 	printf("Start. I992 Kuzmin Alexander\n\n");
 	pthread_create(NULL,NULL, consumer, NULL);
 	pthread_create(NULL,NULL, producer, NULL);
-	sleep(20);
+	sleep(10);
 }
