@@ -1,15 +1,15 @@
-CFLAGS =
+CFLAGS =-o
 
 all: lab1 test
 
-lab1: labl.c
-	gcc $(CFLAGS) -c lab1.c
+debug: lab1
+	gcc -g $(CFLAGS) lab1_debug lab1.c
+
+lab1: lab1.c
+	gcc $(CFLAGS) lab1 lab1.c
 
 test: test.c
-	gcc $(CFLAGS) -c test.c
-
-debug: lab1 test
-debug: CFLAGS+=-g
+	gcc $(CFLAGS) test test.c
 
 clean:
-	rm -rf lab1 test
+	rm -rf lab1 test lab1_debug *.o
